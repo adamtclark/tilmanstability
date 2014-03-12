@@ -33,7 +33,7 @@ find_covar_sum<-function(x) {
 nsites<-length(unique(dat$plot))
 sum_covar<-numeric(nsites)
 n<-1
-for(i in sort(unique(nsites))) {
+for(i in sort(unique(dat$plot))) {
   x<-dat[dat$plot==i,]
   sum_covar[n]<-sum(find_covar_sum(x))
   names(sum_covar)[n]<-i
