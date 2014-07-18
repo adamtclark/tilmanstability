@@ -10,7 +10,7 @@ dat<-data.frame(plot=rep(1:10, each=20), species=letters[1:5], times=rep(1:4, ea
 
 
 #sum of biomass per plot
-sum_abund<-tapply(dat$biomass, dat$plot, mean)
+sum_abund<-tapply(dat$biomass, dat$plot, sum)
 
 #sum of variance for each species in each plot
 sum_var<-rowSums(tapply(dat$biomass, list(dat$plot, dat$species), var))
